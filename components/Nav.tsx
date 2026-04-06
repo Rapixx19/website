@@ -123,7 +123,9 @@ export default function Nav() {
             position: 'fixed', inset: 0, zIndex: 199,
             background: 'rgba(8,9,13,0.98)',
             display: 'flex', flexDirection: 'column',
-            alignItems: 'center', justifyContent: 'center', gap: '32px',
+            alignItems: 'center', justifyContent: 'center', gap: '28px',
+            paddingTop: 'env(safe-area-inset-top, 0px)',
+            paddingBottom: 'env(safe-area-inset-bottom, 0px)',
           }}
         >
           {NAV_LINKS.map(link => (
@@ -132,12 +134,16 @@ export default function Nav() {
               href={link.href}
               style={{
                 fontFamily: 'var(--font-cormorant)',
-                fontSize: '28px',
+                fontSize: '26px',
                 fontWeight: 300,
                 letterSpacing: '0.14em',
                 color: pathname === link.href ? '#fff' : 'rgba(221,216,206,0.45)',
                 textDecoration: 'none',
                 transition: 'color 0.25s',
+                padding: '8px 24px',
+                minHeight: '44px',
+                display: 'flex',
+                alignItems: 'center',
               }}
               aria-current={pathname === link.href ? 'page' : undefined}
             >

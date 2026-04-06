@@ -22,10 +22,21 @@ const jost = Jost({
 export const metadata: Metadata = {
   title: 'Sentavita',
   description: 'Equine health monitoring — Switzerland',
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+  },
   openGraph: {
     title: 'Sentavita',
     description: 'Sensing the life of the horse.',
     siteName: 'Sentavita',
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'black-translucent',
+    title: 'Sentavita',
   },
 }
 

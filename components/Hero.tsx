@@ -88,11 +88,11 @@ export default function Hero() {
             <Image src="/logo.png" alt="Sentavita" width={90} height={90} style={{ objectFit: 'contain' }} onError={() => setLogoError(true)} />
           )}
         </div>
-        <h1 style={{ fontFamily: 'var(--font-cormorant)', fontSize: 'clamp(54px,9vw,88px)', fontWeight: 300, letterSpacing: '0.2em', color: '#fff', lineHeight: 1, animation: 'sv-fadeUp 1.2s ease forwards', opacity: 0, animationDelay: '0.55s' }}>
+        <h1 className="hero-title" style={{ fontFamily: 'var(--font-cormorant)', fontSize: 'clamp(40px,9vw,88px)', fontWeight: 300, letterSpacing: '0.2em', color: '#fff', lineHeight: 1, animation: 'sv-fadeUp 1.2s ease forwards', opacity: 0, animationDelay: '0.55s' }}>
           Sentavita
         </h1>
         <div style={{ width: '40px', height: '1px', background: 'rgba(232,168,42,0.55)', margin: '18px auto', animation: 'sv-fadeIn 1s ease forwards', opacity: 0, animationDelay: '1.1s' }} />
-        <p style={{ fontSize: '10px', letterSpacing: '0.36em', textTransform: 'uppercase', color: 'rgba(221,216,206,0.4)', animation: 'sv-fadeUp 1s ease forwards', opacity: 0, animationDelay: '1.3s' }}>
+        <p className="hero-subtitle" style={{ fontSize: 'clamp(8px,2.2vw,10px)', letterSpacing: '0.36em', textTransform: 'uppercase', color: 'rgba(221,216,206,0.4)', animation: 'sv-fadeUp 1s ease forwards', opacity: 0, animationDelay: '1.3s' }}>
           Equine health · Switzerland · Est. 2026
         </p>
         <button

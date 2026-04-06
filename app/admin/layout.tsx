@@ -7,11 +7,23 @@ export default async function AdminLayout({ children }: { children: React.ReactN
   const { data: { user } } = await supabase.auth.getUser()
   if (!user) redirect('/login')
   return (
-    <div style={{ minHeight: '100vh', background: '#08090D', display: 'flex' }}>
-      <AdminNav userEmail={user.email || ''} />
-      <div style={{ flex: 1, marginLeft: '220px', padding: '40px', maxWidth: 'calc(100vw - 220px)' }}>
-        {children}
+    <>
+      <div className="admin-layout" style={{ minHeight: '100vh', background: '#08090D', display: 'flex' }}>
+        <AdminNav userEmail={user.email || ''} />
+        <div className="admin-content" style={{ flex: 1, marginLeft: '220px', padding: '40px', maxWidth: 'calc(100vw - 220px)', overflowX: 'hidden' }}>
+          {children}
+        </div>
       </div>
-    </div>
+      <style>{`
+        @media (max-width: 768px) {
+          .admin-content {
+            margin-left: 0 !important;
+            max-width: 100vw !important;
+            padding: 20px !important;
+            padding-top: 70px !important;
+          }
+        }
+      `}</style>
+    </>
   )
 }
