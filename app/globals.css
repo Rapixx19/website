@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+
+body {
+  background-color: #08090D;
+  color: #DDD8CE;
+  font-family: var(--font-jost);
+  font-weight: 300;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+::selection { background: rgba(27,138,143,0.3); color: #fff; }
+
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: #08090D; }
+::-webkit-scrollbar-thumb { background: rgba(27,138,143,0.25); border-radius: 2px; }
+
+:focus-visible { outline: 1px solid rgba(27,138,143,0.5); outline-offset: 2px; }
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px #08090D inset;
+  -webkit-text-fill-color: #DDD8CE;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #1B8A8F;
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 999;
+  font-size: 12px;
+  text-decoration: none;
+  transition: top 0.2s;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+@media (max-width: 768px) {
+  .page-padding {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200px 0; }
+  100% { background-position: calc(200px + 100%) 0; }
+}
+.skeleton {
+  background: linear-gradient(90deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.06) 50%, rgba(255,255,255,0.03) 100%);
+  background-size: 200px 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 3px;
+}
+
+@keyframes sv-fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes sv-fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes sv-pulse {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 1; }
+}
