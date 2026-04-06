@@ -64,6 +64,9 @@ export default function Footer() {
         <span style={{ fontSize: '9.5px', letterSpacing: '0.12em', color: 'rgba(221,216,206,0.18)' }}>
           © 2026 Sentavita
         </span>
+        <Link href="/login" style={{ fontSize: '9px', letterSpacing: '0.14em', color: 'rgba(221,216,206,0.1)', textDecoration: 'none', transition: 'color 0.25s' }}>
+          Team
+        </Link>
       </div>
     </footer>
   )
