@@ -18,6 +18,7 @@ const NAV_LINKS = [
   { href: '/articles', label: 'Articles' },
   { href: '/journal', label: 'Journal' },
   { href: '/contact', label: 'Contact' },
+  { href: '/login', label: 'Login' },
 ]
 
 export default function Nav() {
