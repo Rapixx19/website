@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Cormorant_Garamond, Jost } from 'next/font/google'
 import './globals.css'
 import Nav from '@/components/Nav'
+import AudioPlayer from '@/components/AudioPlayer'
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
@@ -34,6 +35,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <a href="#main-content" className="skip-link">Skip to content</a>
         <Nav />
+        <AudioPlayer />
         <main id="main-content">
           {children}
         </main>
