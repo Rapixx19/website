@@ -154,7 +154,7 @@ create policy "auth read own profile" on profiles for select using (auth.uid() =
 insert into content (id, value) values
   ('home.about.body', 'We are a Swiss company working at the frontier of equine health and performance science. Our work connects horses competing at the highest levels of the sport with the precision technology that can sense what they cannot say.'),
   ('home.about.body2', 'We are early, deliberate, and selective about who we work with. If you are building something that matters — or want to be — we would like to hear from you.'),
-  ('home.apply.url', 'https://yourportal.com'),
+  ('home.apply.url', 'https://sentavita-portal.vercel.app'),
   ('team.context', 'Sentavita is being built in Zurich, Switzerland, in close collaboration with C.H.C. Horses SA — the stable of Steve Guerdat, 2012 Olympic Champion and current world number one in show jumping. Development is validated on horses including Dynamix de Belheme, 2023 FEI European Champion.')
 on conflict (id) do update set value = excluded.value;
 
