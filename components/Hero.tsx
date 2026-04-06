@@ -69,7 +69,7 @@ export default function Hero() {
         autoPlay muted loop playsInline
         poster="/horse-poster.jpg"
         aria-hidden="true"
-        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.18, zIndex: 1 }}
+        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.22, zIndex: 1 }}
       >
         <source src="/horse.mp4" type="video/mp4" />
       </video>
@@ -79,13 +79,13 @@ export default function Hero() {
       <div style={{ position: 'relative', zIndex: 5, textAlign: 'center', padding: '0 24px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <div style={{ marginBottom: '16px', animation: 'sv-fadeUp 1.2s ease forwards', opacity: 0, animationDelay: '0.3s' }}>
           {logoError ? (
-            <svg width="62" height="62" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+            <svg width="90" height="90" viewBox="0 0 80 80" fill="none" aria-hidden="true">
               <path d="M40 10C31 10,20 17,17 29C14 41,20 49,25 55C30 61,30 70,28 78H36C36 69,38 61,40 57C42 61,44 69,44 78H52C50 70,50 61,55 55C60 49,66 41,63 29C60 17,49 10,40 10Z" fill="rgba(255,255,255,0.9)" />
               <path d="M33 14C26 11,18 7,14 1C16 9,14 17,13 24" stroke="rgba(255,255,255,0.4)" strokeWidth="1.8" fill="none" strokeLinecap="round" />
               <circle cx="30" cy="23" r="3" fill="#08090D" />
             </svg>
           ) : (
-            <Image src="/logo.png" alt="Sentavita" width={62} height={62} style={{ objectFit: 'contain' }} onError={() => setLogoError(true)} />
+            <Image src="/logo.png" alt="Sentavita" width={90} height={90} style={{ objectFit: 'contain' }} onError={() => setLogoError(true)} />
           )}
         </div>
         <h1 style={{ fontFamily: 'var(--font-cormorant)', fontSize: 'clamp(54px,9vw,88px)', fontWeight: 300, letterSpacing: '0.2em', color: '#fff', lineHeight: 1, animation: 'sv-fadeUp 1.2s ease forwards', opacity: 0, animationDelay: '0.55s' }}>
